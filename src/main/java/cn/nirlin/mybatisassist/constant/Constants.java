@@ -36,12 +36,12 @@ public class Constants {
     /**
      * sql无效选择
      */
-    public static final String SQL_INVALID_SELECTION = "SQL无效选择";
+    public static final String SQL_INVALID_SELECTION = "SQL INVALID SELECTION";
 
     /**
      * sql已复制
      */
-    public static final String SQL_COPIED = "SQL已复制";
+    public static final String SQL_COPIED = "SQL COPIED";
 
 
 }
