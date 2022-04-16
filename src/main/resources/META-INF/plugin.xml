@@ -14,8 +14,9 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    MyBatis辅助插件。<br>
-    <em>1.生成日志</em>
+    MyBatisAssist。<br>
+    Help to operate mybatis.<br>
+    <em>1.Convert mybatis logs to executable sql.</em>
     ]]></description>
 
     <!-- Product and plugin compatibility requirements.
