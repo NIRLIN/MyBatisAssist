@@ -14,9 +14,12 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    MyBatisAssist。<br>
-    Help to operate mybatis.<br>
-    <em>1.Convert mybatis logs to executable sql.</em>
+    MyBatisAssist<br>
+	<br>
+    A simple plugin to help mybatis operate accordingly. Currently has the following functions:<br>
+	一个简单的插件，帮助对mybatis进行相应操作。目前有以下功能：<br>
+    <em>1.Convert mybatis logs to executable sql.</em><br>
+	<em>1.将mybatis日志转化为可执行sql</em><br>
     ]]></description>
 
     <!-- Product and plugin compatibility requirements.
@@ -27,7 +30,7 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <notificationGroup id="Custom Notification Group" displayType="BALLOON" />
+        <notificationGroup id="Custom Notification Group" displayType="BALLOON"/>
     </extensions>
 
     <actions>
