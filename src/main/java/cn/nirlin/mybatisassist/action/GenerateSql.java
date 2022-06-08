@@ -87,7 +87,8 @@ public class GenerateSql extends AnAction {
                 sqlLine = interceptSql(sqlLine);
                 String paramLine = selectRowList.get(i + 1);
                 // 将参数解析存储，清除前后空格
-                paramLine = paramLine.substring(paramLine.indexOf(Constants.SQL_PARAMETERS)).replaceFirst(Constants.SQL_PARAMETERS, "");
+                paramLine= paramLine.substring(paramLine.indexOf(Constants.SQL_PARAMETERS));
+                paramLine = paramLine.replaceFirst(Constants.SQL_PARAMETERS, "");
                 Queue<String> paramQueue = new ConcurrentLinkedQueue<>();
                 String[] params = paramLine.split(",");
                 for (String param : params) {

@@ -14,13 +14,14 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    MyBatisAssist<br>
-	<br>
-    A simple plugin to help mybatis operate accordingly. Currently has the following functions:<br>
-	一个简单的插件，帮助对mybatis进行相应操作。目前有以下功能：<br>
-    <em>1.Convert mybatis logs to executable sql.</em><br>
-	<em>1.将mybatis日志转化为可执行sql</em><br>
+    A simple MyBatis auxiliary plugin to help convert the MyBatis log printed on the console into executable sql.<br>
+    How to use: In the location of the idea output log, select the log content that needs to be converted into sql, right-click '<em>Generate SQL</em>', and the sql will be copied to the clipboard.<br>
     ]]></description>
+
+    <change-notes> <![CDATA[
+    <em>2.MyBatisAssist bug repair.(2022.6.8)</em><br>
+    <em>1.mybatis log to sql.(2022.4.20)</em><br>
+    ]]></change-notes>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->

@@ -11,12 +11,12 @@ public class Constants {
     /**
      * sql分隔符
      */
-    public static final String SQL_DELIMITER = "Preparing: ";
+    public static final String SQL_DELIMITER = "Preparing:";
 
     /**
      * sql参数
      */
-    public static final String SQL_PARAMETERS= "Parameters:";
+    public static final String SQL_PARAMETERS = "Parameters:";
 
     public static final String INSERT = "INSERT";
     public static final String DELETE = "DELETE";
@@ -25,8 +25,9 @@ public class Constants {
 
     /**
      * SQL关键字段
+     * 由于sql字段中可能存在关键字，例如：is_delete，导致切割出错，因此给关键字添加空格
      */
-    public static final List<String> SQL_KEY_FIELD = List.of(INSERT, DELETE, UPDATE, SELECT);
+    public static final List<String> SQL_KEY_FIELD = List.of(INSERT + " ", DELETE + " ", UPDATE + " ", SELECT + " ");
 
     /**
      * sql日志最小行数
