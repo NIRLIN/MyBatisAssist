@@ -8,6 +8,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
+import org.apache.commons.lang3.StringUtils;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
@@ -87,7 +88,7 @@ public class GenerateSql extends AnAction {
                 sqlLine = interceptSql(sqlLine);
                 String paramLine = selectRowList.get(i + 1);
                 // 将参数解析存储，清除前后空格
-                paramLine= paramLine.substring(paramLine.indexOf(Constants.SQL_PARAMETERS));
+                paramLine = paramLine.substring(paramLine.indexOf(Constants.SQL_PARAMETERS));
                 paramLine = paramLine.replaceFirst(Constants.SQL_PARAMETERS, "");
                 Queue<String> paramQueue = new ConcurrentLinkedQueue<>();
                 String[] params = paramLine.split(",");
@@ -99,10 +100,10 @@ public class GenerateSql extends AnAction {
                 for (char c : sqlLine.toCharArray()) {
                     if (c == '?') {
                         String param = paramQueue.remove();
-                        try {
+                        if (StringUtils.isNumeric(param)) {
                             int parseInt = Integer.parseInt(param);
                             stringBuilder.append(parseInt);
-                        } catch (Exception e) {
+                        }else {
                             stringBuilder.append("'");
                             stringBuilder.append(param);
                             stringBuilder.append("'");
