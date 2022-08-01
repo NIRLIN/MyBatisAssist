@@ -7,6 +7,7 @@ group = "cn.nirlin"
 version = "1.0.2"
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
