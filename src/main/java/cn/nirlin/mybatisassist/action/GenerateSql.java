@@ -100,10 +100,11 @@ public class GenerateSql extends AnAction {
                 for (char c : sqlLine.toCharArray()) {
                     if (c == '?') {
                         String param = paramQueue.remove();
-                        if (StringUtils.isNumeric(param)) {
+                        // 判断当前参数长度，如果为数字，且同时长度为小于等于6时才进行数字转化
+                        if (StringUtils.isNumeric(param) && param.length() <= 6) {
                             int parseInt = Integer.parseInt(param);
                             stringBuilder.append(parseInt);
-                        }else {
+                        } else {
                             stringBuilder.append("'");
                             stringBuilder.append(param);
                             stringBuilder.append("'");
